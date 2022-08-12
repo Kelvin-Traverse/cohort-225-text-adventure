@@ -1,26 +1,25 @@
-// Exit class
-class Exit {
-	constructor(id, exitsTo, isSecret) {
-		this.id = id; // The exit's id
-		this.exitsTo = exitsTo; // room id that the exit goes to
-		this.isSecret = isSecret; // is the room secret?
-	}
-}
+// Constructors created before switching to hard coding
+// // Exit class
+// class Exit {
+// 	constructor(id, exitsTo, isSecret) {
+// 		this.id = id; // The exit's id
+// 		this.exitsTo = exitsTo; // room id that the exit goes to
+// 		this.isSecret = isSecret; // is the room secret?
+// 	}
+// }
 
-// Room class
-class Room {
-	constructor(id, name, description, dimensions, exits={}, content={}) {
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.dimensions = dimensions;
-		this.exits = exits;
-		this.content = content;
-		this.visited = false;		
-	}
-}
-
-// room1 = new Room(1, 'The cool room', 'It\'s really cool here', 'Big');
+// // Room class
+// class Room {
+// 	constructor(id, name, description, dimensions, exits={}, content={}) {
+// 		this.id = id;
+// 		this.name = name;
+// 		this.description = description;
+// 		this.dimensions = dimensions;
+// 		this.exits = exits;
+// 		this.content = content;
+// 		this.visited = false;		
+// 	}
+// }
 
 
 //Room 1 the cold room
@@ -79,11 +78,38 @@ const room2 = {
   	},
   //content
 	content: ['chair', 'red bookcase', 'photo frame', 'statue'],
-  	visited: true 
+  	visited: false
 };
 
 //Room 3
-
+const room3 = {
+    name: 'Room Of Enlightenment',
+    description: [
+        'You enter a dark dim room',
+        'In the center of the room there is a key within a vase',
+        'This key will either move you forward or hold you back'
+    ],
+    dimensions: 'Medium',
+    exits: {
+		east: {
+			exitsTo: 4,
+			isSecret: false,
+			isBlocked: true
+		},
+		south: { 
+			exitsTo: 5, 
+			isSecret: false,
+			isBlocked: false
+		},
+		west: {
+			exitsTo: 1,
+			isSecret: false,
+			isBlocked: false
+		}
+    },
+    content: ['Key'],
+    visited: false
+};
 
 
 //Room 4
