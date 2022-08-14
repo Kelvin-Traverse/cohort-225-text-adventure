@@ -53,32 +53,23 @@ const room1 = {
 
 //Room 2
 const room2 = {
-  //id
-  //2, 
-  //name
-  	name:'library',
-  //description
+  name:'library',
 	description: ['You entered library room through a secret bookshelf door behind you.',
    'Door behind you was closed automatically.',
-   'If you want to exit the library room you should find the secret key.',
+   'If you want to exit the library room you should find the red bookcase.',
    'There are two chairs in front of the windows.',
    'What do you want to do?'
-  	],
-  //dimensions
+  ],
 	dimensions: 'big',
-  //img
-  //'room2.png',
-  //exit
-  	exits: {
-    	east: {
-      		exitsTo: 1,
-      		isSecret: true,
-      		isBlocked: true
-    	}
-  	},
-  //content
-	content: ['chair', 'red bookcase', 'photo frame', 'statue'],
-  	visited: false
+  exits: {
+		east: {
+				exitsTo: 1,
+				isSecret: true,
+				isBlocked: true
+		}
+  },
+	content: ['red bookcase'],
+  visited: false
 };
 
 //Room 3
